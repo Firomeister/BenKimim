@@ -1,0 +1,22 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-item a {
+  display: block;
+}
+.carousel-item img {
+  pointer-events: auto;
+}
