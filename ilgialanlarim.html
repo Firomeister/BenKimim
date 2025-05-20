@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İlgi Alanlarım - Filmler</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Özel Stil Dosyası -->
+  <link rel="stylesheet" href="style-ilgi.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">İlgi Alanlarım</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ana İçerik -->
+  <main class="container my-5">
+    <h1 class="mb-4">Popüler Filmler</h1>
+    <div id="film-listesi" class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Filmler burada listelenecek -->
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Özel JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const apiKey = '4f2d389d5f4209136543fb28951a4542'; // Kendi TMDb API anahtarınızı buraya ekleyin
+      const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=tr-TR&page=1`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const filmListesi = document.getElementById('film-listesi');
+          data.results.forEach(film => {
+            const filmKart = document.createElement('div');
+            filmKart.classList.add('col');
+            filmKart.innerHTML = `
+              <div class="card h-100">
+                <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" class="card-img-top" alt="${film.title}">
+                <div class="card-body">
+                  <h5 class="card-title">${film.title}</h5>
+                  <p class="card-text">${film.overview.substring(0, 100)}...</p>
+                </div>
+              </div>
+            `;
+            filmListesi.appendChild(filmKart);
+          });
+        })
+        .catch(error => console.error('Hata:', error));
+    });
+  </script>
+</body>
+</html>
+
+
