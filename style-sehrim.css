@@ -20,3 +20,7 @@ h2 {
 .carousel-item img {
   pointer-events: auto;
 }
+
+footer.bg-dark {
+  color: #198754 !important; 
+}
