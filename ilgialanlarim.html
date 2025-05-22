@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>İlgi Alanlarım</title>
-  <!-- Bootstrap CSS -->
+  <title>İlgi Alanlarım - Oyunlar</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Özel Stil Dosyası -->
   <link rel="stylesheet" href="style-ilgi.css"/>
 </head>
 <body>
@@ -33,45 +31,46 @@
 
   <!-- Ana İçerik -->
   <main class="container my-5">
-    <h1 class="mb-4">Popüler Filmler</h1>
-    <div id="film-listesi" class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- Filmler burada listelenecek -->
+    <h1 class="mb-4">Popüler Video Oyunları</h1>
+    <div id="oyun-listesi" class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Oyunlar burada listelenecek -->
     </div>
   </main>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Özel JS -->
+
+    <!-- FreeToGame API JS -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const apiKey = '4f2d389d5f4209136543fb28951a4542'; // Kendi TMDb API anahtarınızı buraya ekleyin
-      const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=tr-TR&page=1`;
-
-      fetch(apiUrl)
-        .then(response => response.json())
+      fetch("https://www.freetogame.com/api/games")
+        .then(res => res.json())
         .then(data => {
-          const filmListesi = document.getElementById('film-listesi');
-          data.results.forEach(film => {
-            const filmKart = document.createElement('div');
-            filmKart.classList.add('col');
-            filmKart.innerHTML = `
-              <div class="card h-100">
-                <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" class="card-img-top" alt="${film.title}">
+          const oyunlarDiv = document.getElementById("oyunlar");
+          data.slice(0, 12).forEach(oyun => {
+            const kart = document.createElement("div");
+            kart.className = "col";
+            kart.innerHTML = `
+              <div class="card h-100 shadow">
+                <img src="${oyun.thumbnail}" class="card-img-top" alt="${oyun.title}">
                 <div class="card-body">
-                  <h5 class="card-title">${film.title}</h5>
-                  <p class="card-text">${film.overview.substring(0, 100)}...</p>
+                  <h5 class="card-title">${oyun.title}</h5>
+                  <p class="card-text">${oyun.short_description.substring(0, 100)}...</p>
+                  <a href="${oyun.game_url}" class="btn btn-primary btn-sm" target="_blank">Oyuna Git</a>
                 </div>
               </div>
             `;
-            filmListesi.appendChild(filmKart);
+            oyunlarDiv.appendChild(kart);
           });
         })
-        .catch(error => console.error('Hata:', error));
+        .catch(err => {
+          console.error("Veri alınamadı:", err);
+        });
     });
   </script>
 
-    <!-- İletişim & Linkler -->
-  <footer class="bg-dark text-white py-4">
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
     <div class="container text-center">
       <h4>Bağlantılar</h4>
       <p>Email: firatusta56@gmail.com</p>
@@ -79,8 +78,6 @@
       <p>LinkedIn: <a href="https://www.linkedin.com/in/firatusta16" target="_blank" class="text-white">linkedin.com/in/firatusta16</a></p>
     </div>
   </footer>
-  
+
 </body>
 </html>
-
-
