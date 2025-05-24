@@ -14,3 +14,7 @@ h1 {
 .card:hover {
   transform: scale(1.05);
 }
+
+.navbar-brand {
+  font-weight: bold;
+}

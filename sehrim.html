@@ -15,13 +15,12 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
-    <a class="navbar-brand" href="#">Şehrim</a>
+    <a class="navbar-brand" href="sehrim.html">Şehrim</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
@@ -35,6 +34,11 @@
   </div>
 </nav>
 
+<div class="container text-center mt-5">
+  <h1 class="display-5 fw-bold text-success">Yeşil Bursa’ya Yolculuk</h1>
+  <p class="lead text-secondary">Tarih, doğa ve lezzetin buluştuğu şehirde keşfe çıkın. Ulu Camii'den Uludağ’a, İskender’dan Hanlar Bölgesi'ne uzanan eşsiz bir yolculuğa hazır mısınız?</p>
+</div>
+
 <!-- SLIDER -->
 <div id="bursaCarousel" class="carousel slide container mt-4" data-bs-ride="carousel">
   <div class="carousel-inner rounded shadow">
@@ -47,8 +51,8 @@
            onclick="document.getElementById('uludag').scrollIntoView({ behavior: 'smooth' });">
     </div>
     <div class="carousel-item">
-      <img src="img/koza.jpg" class="d-block w-100" alt="Koza Han"
-           onclick="document.getElementById('koza').scrollIntoView({ behavior: 'smooth' });">
+      <img src="img/iskender.jpg" class="d-block w-100" alt="İskender"
+           onclick="document.getElementById('iskender').scrollIntoView({ behavior: 'smooth' });">
     </div>
     <div class="carousel-item">
       <img src="img/han.jpg" class="d-block w-100" alt="Hanlar Bölgesi"
@@ -66,55 +70,70 @@
 <!-- Sayfa İçeriği -->
 <main class="container my-5">
   <section id="ulucami" class="mb-5">
-    <h2>Ulu Camii</h2>
-    <p>1399 yılında Yıldırım Bayezid tarafından yaptırılan Ulu Camii, Bursa’nın en büyük camilerinden biridir.</p>
+    <h2>🕌 Bursa’nın Kalbindeki Mabet: Ulu Camii</h2>
+    <p>Bursa’nın tam kalbinde, tarih ve maneviyatın iç içe geçtiği bir yapı yükselir: Ulu Camii. Yıldırım Bayezid tarafından 1396-1399 yılları arasında Niğbolu Zaferi’nin şükran nişanesi olarak inşa ettirilen bu muazzam eser, sadece bir ibadethane değil; aynı zamanda Osmanlı’nın kudretinin, sanatının ve inancının simgesidir.</p>
+    <p>20 kubbeli görkemli mimarisiyle Selçuklu geleneğinden izler taşıyan cami, Anadolu’daki çok kubbeli cami mimarisinin en önemli örneklerinden biridir. İç mekânda yer alan devasa ahşap minber, geometrik ve bitkisel motiflerle süslenmiş bir sanat şaheseridir. 192 farklı hat sanatına sahip levhalar ve yazıtlar, caminin içini adeta bir açık hava hat müzesine dönüştürür.</p>
+    <p>Ulu Camii, sadece bir yapı değil; yüzyıllardır süren bir sessiz ibadet, bir medeniyetin izi, bir Bursa klasiğidir. Huzur arayanlar için bir sığınak, tarih meraklıları için bir duraktır.</p>
   </section>
 
   <section id="uludag" class="mb-5">
-    <h2>Uludağ</h2>
-    <p>Türkiye'nin önemli kayak merkezlerinden biridir. Doğal güzelliği ile büyüler.</p>
+    <h2>🏔️ Efsaneler Diyarı Uludağ</h2>
+    <p>Türkiye’nin en görkemli dağlarından biri olan Uludağ, yalnızca Bursa’nın değil, tüm Marmara Bölgesi’nin göğe uzanan tacıdır. Antik çağlarda Olympos adıyla bilinen bu dağ, mitolojik tanrıların toplantı yeri olarak anılır. Bugünse doğanın, huzurun ve maceranın buluşma noktasıdır.</p>
+    <p>Kış aylarında bembeyaz bir örtüyle kaplanan zirveleri, Türkiye’nin en popüler kayak merkezlerinden birine ev sahipliği yapar. Yaz aylarında ise serin havası, yeşilin bin bir tonunu barındıran ormanları ve doğa yürüyüşü rotalarıyla şehrin karmaşasından kaçanlara kucak açar.</p>
+    <p>Uludağ, sadece doğal güzelliğiyle değil, barındırdığı endemik bitki türleri, yaban hayatı ve manevi atmosferiyle de benzersizdir. Zirvesine çıktığınızda yalnızca Bursa’yı değil, adeta geçmişle geleceği bir arada seyredersiniz.</p>
   </section>
 
-  <section id="koza" class="mb-5">
-    <h2>Koza Han</h2>
-    <p>İpekçilik kültürünü yansıtan tarihi bir han. Günümüzde çay bahçesi ve dükkanlar bulunur.</p>
+  <section id="iskender" class="mb-5">
+    <h2>🥙 Lezzetin Efsanesi: Bursa İskender Kebap</h2>
+    <p>Bursa denilince akla ilk gelen lezzetlerden biri hiç şüphesiz İskender kebaptır. Bu eşsiz tat, 19. yüzyılda İskender Efendi tarafından bulunmuş ve o günden bu yana adını hem şehirle hem de Türk mutfağıyla özdeşleştirmiştir.</p>
+    <p>İncecik dilimlenmiş döner etlerinin altına serilen tereyağlı pide parçaları, üzerinde gezinen domates sosu ve son olarak masada eriyen kızgın tereyağı ile Bursa İskenderi, sadece bir yemek değil, adeta bir törendir.</p>
+    <p>Yanında gelen yoğurt, damakta dengeyi sağlarken; etin yumuşaklığı, tereyağının kokusu ve pidenin lezzeti bu kebabı benzersiz bir deneyim haline getirir. Hem göze hem damağa hitap eden bu geleneksel lezzet, Bursa’ya gelen her ziyaretçinin mutlaka tatması gereken bir başyapıttır.</p>
+    <p>İskender kebap, sadece bir yemek değil; Bursa’nın kültürel mirası, ailesel bir ustalık geleneği ve Türk mutfağının gururudur.</p>
   </section>
 
   <section id="hanlar" class="mb-5">
-    <h2>Hanlar Bölgesi</h2>
-    <p>Bursa’nın tarihî ticaret merkezidir. Çok sayıda han ve çarşı barındırır.</p>
+    <h2>🏛️ Bursa Hanlar Bölgesi: Tarihin Ticaret Merkezi</h2>
+    <p>Bursa’nın kalbinde yer alan Hanlar Bölgesi, Osmanlı döneminden bu yana şehrin en önemli ticaret ve sosyal yaşam alanlarından biri olmuştur. Tarihi ipek yolu üzerinde bulunan bu bölge, hem yerli hem de yabancı tüccarların buluşma noktası olarak büyük bir ekonomik hareketlilik sağlamıştır.</p>
+    <p>Bölgedeki hanlar ve çarşılar, sadece ticaret yapmak için değil, aynı zamanda konaklama, dinlenme ve sosyalleşme amaçlı da kullanılmıştır. Koza Han, Kırk Saatler Çarşısı ve Büyük ve Küçük Balık Hanları gibi yapılar, hem mimari açıdan hem de kültürel miras olarak büyük önem taşır.</p>
+    <p>Hanlar Bölgesi’nin taş işçiliği, ahşap oyma detayları ve atmosferi, ziyaretçilere adeta zamanda yolculuk yapıyormuş hissi verir. Günümüzde de aktif bir şekilde kullanılan bu hanlarda, ipek, tekstil, hediyelik eşya ve yöresel ürünler satılmaktadır.</p>
+    <P>Bursa Hanlar Bölgesi, şehrin tarihini ve kültürel zenginliğini yansıtan, ticaretin ve sosyal yaşamın iç içe geçtiği eşsiz bir mekandır. Tarih ve alışverişi bir arada yaşamak isteyenler için mutlaka görülmesi gereken yerlerden biridir.</P>
   </section>
 
   <section id="takimimiz" class="mb-5">
-    <h2>Takımımız - Bursaspor</h2>
+    <h2>🐊Bursaspor: Yeşil Beyazın Gururu, Anadolu’nun Şampiyonu</h2>
     <div class="row">
       <div class="col-md-4">
         <img src="img/bursaspor-logo.png" alt="Bursaspor Logosu" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-8">
         <p><strong>Bursaspor</strong>, 1963 yılında kurulmuş, yeşil-beyaz renklere sahip köklü bir futbol kulübüdür. 2009-2010 sezonunda Süper Lig şampiyonu olarak "Anadolu'dan çıkan ilk şampiyon" unvanını kazanmıştır.</p>
-        <p>Maçlarını Bursa Büyükşehir Belediye Stadyumu’nda oynamaktadır. Taraftar grubu Teksas, Türkiye'nin en coşkulu taraftar topluluklarından biridir.</p>
+        <p>Maçlarını Atatürk Spor Kompleksi Matlı Stadyumu’nda oynamaktadır. Taraftar grubu Teksas, Türkiye'nin en coşkulu taraftar topluluklarından biridir.</p>
         <ul>
           <li>Kuruluş: 1963</li>
           <li>Renkler: Yeşil - Beyaz</li>
-          <li>Stadyum: Bursa Büyükşehir Belediye Stadyumu</li>
+          <li>Stadyum: Atatürk Spor Kompleksi Matlı Stadyumu</li>
           <li>Başarı: 2009-2010 Süper Lig Şampiyonu</li>
         </ul>
       </div>
     </div>
-    <a href="takimimiz.html" class="btn btn-success mt-2">Bursaspor'u Tanıyın</a>
+    <a href="takimimiz.html" class="btn btn-success mt-2">Daha Fazlası İçin!</a>
   </section>
 </main>
 
-  <!-- İletişim & Linkler -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <h4>Bağlantılar</h4>
-      <p>Email: firatusta56@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/Firomeister" target="_blank" class="text-white">github.com/Firomeister</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/firatusta16" target="_blank" class="text-white">linkedin.com/in/firatusta16</a></p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer class="bg-success text-white py-4">
+  <div class="container text-center">
+    <h4>Bağlantılar</h4>
+    <p>Email: firatusta56@gmail.com</p>
+    <p>
+      GitHub: <a href="https://github.com/Firomeister" class="text-white" target="_blank">github.com/Firomeister</a>
+    </p>
+    <p>
+      LinkedIn: <a href="https://www.linkedin.com/in/firatusta16" class="text-white" target="_blank">linkedin.com/in/firatusta16</a>
+    </p>
+    <p class="mb-1">&copy; 2025 - Tüm hakları saklıdır.</p>
+  </div>
+</footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

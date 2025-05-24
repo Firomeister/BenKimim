@@ -17,10 +17,14 @@ h2 {
 .carousel-item a {
   display: block;
 }
+
 .carousel-item img {
-  pointer-events: auto;
+  height: 600px; 
+  object-fit: cover; 
+  width: 100%;
+  cursor: pointer;
 }
 
-footer.bg-dark {
-  color: #198754 !important; 
+.navbar-brand {
+  font-weight: bold;
 }

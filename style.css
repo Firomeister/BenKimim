@@ -25,7 +25,9 @@
     margin-bottom: 60px;
   }
 
-
+.navbar-brand {
+  font-weight: bold;
+}
 
 
   
